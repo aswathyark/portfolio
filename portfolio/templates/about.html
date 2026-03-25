@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+.section{padding:40px 0;}
+.title{margin-bottom:10px;font-weight:600;}
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom:20px;
+}
+</style>
+
+<main class="main">
+<div class="container">
+
+<!-- About -->
+<div class="section text-center">
+  <h2 class="title">About Me</h2>
+  <p>
+    I am a Python Full Stack Developer with knowledge in Django and web development. 
+    I like building simple, scalable, and user-friendly applications.
+  </p>
+</div>
+
+<!-- What I Do -->
+<div class="section">
+  <h4 class="title">What I Do</h4>
+  <div class="card">
+    <ul>
+      <li>Backend development using Python & Django</li>
+      <li>Frontend development using HTML, CSS, JavaScript</li>
+      <li>REST API development</li>
+      <li>Database management (MySQL, PostgreSQL)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Tech Stack -->
+<div class="section">
+  <h4 class="title">Tech Stack</h4>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <h6>Backend</h6>
+        <p>Python, Django</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <h6>Frontend</h6>
+        <p>HTML, CSS, JavaScript, Bootstrap</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <h6>Database</h6>
+        <p>MySQL, PostgreSQL,MongoDB</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Goals -->
+<div class="section">
+  <h4 class="title">Goals</h4>
+  <div class="card">
+    <p>
+      My goal is to improve my skills and become a professional full stack developer 
+      by working on real-world projects.
+    </p>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="section">
+  <h4 class="title">Contact</h4>
+  <div class="card">
+    <p>Email: aswathyar2701@gmail.com</p>
+    <p>Phone: 9605491531</p>
+  </div>
+</div>
+
+</div>
+</main>
+
+{% endblock %}

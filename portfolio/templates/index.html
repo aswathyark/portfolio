@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="{% static 'assets/img/backg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>ASWATHY A R </h2>
+            <p>Python fullstack developer</p>
+            <a href="about/" class="btn-get-started">About Me</a>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+  </main>
+{% endblock %}
