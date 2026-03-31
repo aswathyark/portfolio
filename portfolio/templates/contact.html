@@ -10,7 +10,6 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-       
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -24,7 +23,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Shornur2,Kulappulli,Madhunilayam,679122</p>
+                  <p>Shornur2,kulappulli,679122</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -43,19 +42,21 @@
                   <p>aswathyar2701@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
-              <iframe 
-              src="https://www.google.com/maps?q=Shornur,Kulappulli,Madhunilayam,679122&output=embed"
-              style="border:0; width:100%; height:270px; border-radius:10px;"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
-              {% comment %} <iframe src="https://www.google.com/maps?q=Shornur,Kerala&output=embed"></iframe> {% endcomment %}
+
+              <iframe src="https://www.google.com/maps?q=Shornur,Kerala&output=embed"></iframe>
             </div>
           </div>
 
           <div class="col-lg-7">
+
+
+            {% if messages %}
+                {% for message in messages %}
+                        <p class="text-success fw-semibold mt-3">{{ message }}</p>
+                 {% endfor %}
+            {% endif %}
             <form method="POST" action="">
-              {% csrf_token %}
+              {% csrf_token %}   
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -77,14 +78,22 @@
                   <label for="message-field" class="pb-2">Message</label>
                   <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
-{% comment %} 
-                <div class="col-md-12 text-center">
+
+                  <div class="col-md-12 text-center form-actions">
+                    <button type="submit" 
+                      class="btn btn-primary px-4 py-2 fw-semibold rounded-pill shadow-sm btn-send">
+                      <span class="btn-text">Send Message</span>
+                    </button>
+                  </div>
+
+
+                {% comment %} <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div> {% endcomment %}
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
 
                   <button type="submit">Send Message</button>
-                </div>
+                </div> {% endcomment %}
 
               </div>
             </form>

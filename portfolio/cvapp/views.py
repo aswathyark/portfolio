@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.core.mail import send_mail
+from django.contrib import messages
 from django.conf import settings
 # Create your views here.
 def index(request):
@@ -33,6 +34,8 @@ def contact(request):
             ['your_email@gmail.com'],
             fail_silently=False,
         )
+        messages.success(request, "Message has been sent Succcessfully")
+        return redirect('/contact/')
 
         return redirect('/')
 

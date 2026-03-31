@@ -4,29 +4,77 @@
 
 <style>
 .section{padding:40px 0;}
-.title{margin-bottom:10px;font-weight:600;}
+.title{margin-bottom:15px;font-weight:600;}
+
 .card{
   background:#fff;
   padding:20px;
-  border-radius:8px;
+  border-radius:10px;
   box-shadow:0 4px 10px rgba(0,0,0,0.05);
   margin-bottom:20px;
+}
+
+img{
+  border:4px solid #f1f1f1;
+}
+
+.card ul li{
+  padding:5px 0;
 }
 </style>
 
 <main class="main">
 <div class="container">
 
-<!-- About -->
-<div class="section text-center">
-  <h2 class="title">About Me</h2>
-  <p>
-    I am a Python Full Stack Developer with knowledge in Django and web development. 
-    I like building simple, scalable, and user-friendly applications.
-  </p>
+<!-- ✅ About + Profile -->
+<div class="section">
+  <div class="row align-items-center">
+
+    <!-- Profile Image -->
+    <div class="col-md-4 text-center">
+      <img src="{% static 'images/ar.jpg' %}" 
+           alt="Profile Photo"
+           class="img-fluid rounded-circle shadow"
+           style="max-width:220px;">
+    </div>
+
+    <!-- Profile Details -->
+    <div class="col-md-8">
+      <h2 class="title">Who I Am</h2>
+
+      <p>
+        Hello! I am <strong>Aswathy R</strong>, a passionate Python Full Stack Developer 
+        who loves building modern, scalable web applications using Django.
+      </p>
+
+      <div class="card mt-3">
+        <ul class="list-unstyled mb-0">
+          <li><strong>Date of Birth:</strong> 27 January 2000</li>
+          <li><strong>Nationality:</strong> Indian</li>
+          <li><strong>Location:</strong> Kerala, India</li>
+          <li><strong>Email:</strong> aswathyar2701@gmail.com</li>
+          <li><strong>Phone:</strong> 9605491531</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<!-- What I Do -->
+<!-- ✅ Likes / Interests -->
+<div class="section">
+  <h4 class="title">Likes & Interests</h4>
+  <div class="card">
+    <ul>
+      <li>Coding and learning new technologies</li>
+      <li>Building web applications</li>
+      <li>Problem solving</li>
+      <li>Watching tech videos</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ✅ What I Do -->
 <div class="section">
   <h4 class="title">What I Do</h4>
   <div class="card">
@@ -39,51 +87,42 @@
   </div>
 </div>
 
-<!-- Tech Stack -->
+<!-- ✅ Tech Stack -->
 <div class="section">
   <h4 class="title">Tech Stack</h4>
 
   <div class="row">
     <div class="col-md-4">
-      <div class="card">
+      <div class="card text-center">
         <h6>Backend</h6>
         <p>Python, Django</p>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card">
+      <div class="card text-center">
         <h6>Frontend</h6>
         <p>HTML, CSS, JavaScript, Bootstrap</p>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card">
+      <div class="card text-center">
         <h6>Database</h6>
-        <p>MySQL, PostgreSQL,MongoDB</p>
+        <p>MySQL, PostgreSQL, MongoDB</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Goals -->
+<!-- ✅ Goals -->
 <div class="section">
   <h4 class="title">Goals</h4>
   <div class="card">
     <p>
-      My goal is to improve my skills and become a professional full stack developer 
-      by working on real-world projects.
+      My goal is to become a skilled full stack developer and work on real-world 
+      projects that solve meaningful problems.
     </p>
-  </div>
-</div>
-
-<!-- Contact -->
-<div class="section">
-  <h4 class="title">Contact</h4>
-  <div class="card">
-    <p>Email: aswathyar2701@gmail.com</p>
-    <p>Phone: 9605491531</p>
   </div>
 </div>
 
