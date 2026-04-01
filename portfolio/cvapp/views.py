@@ -9,9 +9,7 @@ def about(request):
     return render(request,'about.html')
 def resume(request):
     return render(request,'resume.html')
-from django.shortcuts import render
-from django.core.mail import send_mail
-from django.conf import settings
+
 
 def contact(request):
     if request.method == "POST":
@@ -37,6 +35,6 @@ def contact(request):
         messages.success(request, "Message has been sent Succcessfully")
         return redirect('/contact/')
 
-        return redirect('/')
+       
 
     return render(request, "contact.html")
