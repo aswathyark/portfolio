@@ -24,14 +24,24 @@ def contact(request):
         Message:
         {message}
         """
-
-        send_mail(
-            subject,
-            full_message,
-            settings.EMAIL_HOST_USER,
-            ['your_email@gmail.com'],
-            fail_silently=False,
-        )
+        try:
+            send_mail(
+                subject,
+                full_message,
+                settings.EMAIL_HOST_USER,
+                ['aswathymadhukrishipcs@gmail.com'],  # send to yourself
+                fail_silently=False,
+            )
+            print("EMAIL SENT SUCCESS")
+        except Exception as e:
+            print("EMAIL ERROR:", e)
+        # send_mail(
+        #     subject,
+        #     full_message,
+        #     settings.EMAIL_HOST_USER,
+        #     ['your_email@gmail.com'],
+        #     fail_silently=True,
+        # )
         messages.success(request, "Message has been sent Succcessfully")
         return redirect('/contact/')
 
